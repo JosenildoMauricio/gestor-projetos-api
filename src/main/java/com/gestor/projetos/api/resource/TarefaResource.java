@@ -37,9 +37,9 @@ public class TarefaResource {
 	@Autowired
 	private ApplicationEventPublisher publisher;
 	
-	@GetMapping
-	public List<Tarefa> listar() {
-		return tarefaRepository.findAll();
+	@GetMapping("/por-id-projeto/{idProjeto}")
+	public List<Tarefa> listar(@PathVariable Long idProjeto) {
+		return tarefaRepository.listaTarefaPorIdProjeto(idProjeto);
 	}
 	
 	@PostMapping

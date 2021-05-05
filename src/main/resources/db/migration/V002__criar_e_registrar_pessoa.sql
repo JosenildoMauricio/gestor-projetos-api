@@ -15,5 +15,5 @@ INSERT INTO pessoa (nome, email, contato, senha, avatar, ativo)
 		'62982696065', 
 		'$2a$10$iMxlyIaYBfjTAmSun3mDxuDcWoB2sMfo82iQkUFFJ95Ny.YVfWHge',
 		'',
-		false
+		true
     );

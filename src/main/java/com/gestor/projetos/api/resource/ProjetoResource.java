@@ -37,9 +37,9 @@ public class ProjetoResource {
 	@Autowired
 	private ApplicationEventPublisher publisher;
 	
-	@GetMapping
-	public List<Projeto> listar() {
-		return projetoRepository.findAll();
+	@GetMapping("/por-id-pessoa/{idPessoa}")
+	public List<Projeto> listar(@PathVariable Long idPessoa) {
+		return projetoRepository.listaProjetosPorIdPessoa(idPessoa);
 	}
 	
 	@PostMapping
